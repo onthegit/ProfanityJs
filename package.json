@@ -11,6 +11,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "prepare": "npm run build",
     "clean": "npx rimraf dist",
     "build": "npm run clean && npx tsc",
     "local": "npm run build && concurrently -p \"none\" \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
