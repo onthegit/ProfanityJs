@@ -56,6 +56,14 @@ export class Profanity {
     }
   }
 
+  //find returns the found profane words
+  find(text: string) {   
+    if (text) {
+      return Array.from(text.matchAll(this.regex))
+    }
+    return []
+  }
+
   addWords(words: string[]): void {
     this.blacklist.addWords(words);
   }
